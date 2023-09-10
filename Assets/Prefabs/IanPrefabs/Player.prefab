@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 7740125741278897517}
   - component: {fileID: 7740125741278897504}
   - component: {fileID: -4800663974992602751}
-  - component: {fileID: -7688819377780392577}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -153,15 +152,3 @@ MonoBehaviour:
   Pigjamxtarget: 0
   ChangingLeft: 0
   ChangingRight: 1
---- !u!114 &-7688819377780392577
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7740125741278897514}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 52ab269016fb649338927d8b74887aa4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
