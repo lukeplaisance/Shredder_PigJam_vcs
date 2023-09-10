@@ -13,7 +13,8 @@ GameObject:
   - component: {fileID: 7740125741278897516}
   - component: {fileID: 7740125741278897517}
   - component: {fileID: 7740125741278897504}
-  - component: {fileID: 5276314840343937477}
+  - component: {fileID: -4800663974992602751}
+  - component: {fileID: -7688819377780392577}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -134,7 +135,7 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!114 &5276314840343937477
+--- !u!114 &-4800663974992602751
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -143,12 +144,24 @@ MonoBehaviour:
   m_GameObject: {fileID: 7740125741278897514}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8a5bc6ec730294949aec31209ea0af79, type: 3}
+  m_Script: {fileID: 11500000, guid: 8dc57869c225341c285c817190cb5974, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   Pigjamplayer: {fileID: 7740125741278897504}
   Pigjamposition: {fileID: 7740125741278897518}
-  Pigjamxtracker: 0
+  Lanechangespeed: 10
   Pigjamxtarget: 0
   ChangingLeft: 0
-  ChangingRight: 0
+  ChangingRight: 1
+--- !u!114 &-7688819377780392577
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7740125741278897514}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52ab269016fb649338927d8b74887aa4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
