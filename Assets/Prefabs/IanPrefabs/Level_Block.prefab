@@ -219,6 +219,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 910114526710934009}
+  - component: {fileID: 4426331072969541454}
   m_Layer: 0
   m_Name: Level_Block
   m_TagString: Untagged
@@ -245,6 +246,21 @@ Transform:
   - {fileID: 1578919685252779899}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &4426331072969541454
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5511520090461195423}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 52c96ccdeaec44947a5681eb06e9ccea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _keyNotePrefab: {fileID: 206687725081815557, guid: 0bd61ff05ce98e341ba1270e7574b4f5, type: 3}
+  _obstaclePrefab: {fileID: 7987300659661137595, guid: 6f8c8459bb70b2e4f9f25233c01c841b, type: 3}
+  _songManager: {fileID: 0}
 --- !u!1 &6472555161406295548
 GameObject:
   m_ObjectHideFlags: 0

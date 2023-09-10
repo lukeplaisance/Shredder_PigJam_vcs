@@ -31,13 +31,8 @@ public class SongManager : MonoBehaviour
 
     //the index of the next note to be spawned
     public int nextIndex = 0;
-    private Vector3 spawnPos;
-    private Vector3 removePos;
 
-    public GameObject notePrefab;
-    private GameObject _noteInstance;
-    public Vector3 SpawnPos => spawnPos;
-    public Vector3 RemovePos => removePos;
+    public Action SpawnKeyNote;
 
     void Start()
     {
@@ -60,16 +55,7 @@ public class SongManager : MonoBehaviour
         //calculate the position in beats
         songPosInBeats = songPosition / secPerBeat;
         if (nextIndex < notes.Length && notes[nextIndex] < songPosInBeats + beatsShownInAdvance)
-        {
-          _noteInstance =  Instantiate( notePrefab );
-            _noteInstance.transform.position = _noteInstance.GetComponent<Note>().spawnPos;
-            _noteInstance.GetComponent<Note>().songPosInBeats = songPosInBeats;
-            _noteInstance.GetComponent<Note>().beatsShownInAdvance = beatsShownInAdvance;
-
-            //initialize the fields of the music note
-
-            nextIndex++;
-        }
+            SpawnKeyNote.Invoke();
     }
 
 }
