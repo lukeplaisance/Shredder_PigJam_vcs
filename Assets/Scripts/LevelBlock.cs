@@ -15,12 +15,14 @@ public class LevelBlock : MonoBehaviour
     {
         _songManager = FindAnyObjectByType<SongManager>();
 
-        foreach(GameObject lane in transform)
+        int i = 0;
+        foreach (var lane in transform)
         {
-            _lanes.Add(lane);
+            var child = transform.GetChild(i);
+            _lanes.Add(child.gameObject);
         }
 
-        if(_songManager != null)
+        if (_songManager != null)
             _songManager.SpawnKeyNote += CallSpawnCoroutine;
 
     }
