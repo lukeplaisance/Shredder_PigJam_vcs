@@ -16,7 +16,7 @@ public class EnviroScroll : MonoBehaviour
     {
         float t = songManager.songPosition;
 
-            if(!songManager.audio.isPlaying)
+            if(songManager.audio.isPlaying)
             transform.localPosition = Vector3.Lerp(new Vector3(0,0,0) , new Vector3(0,0,-1200f), t/100);  
             
         
