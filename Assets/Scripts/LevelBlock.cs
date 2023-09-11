@@ -21,20 +21,14 @@ public class LevelBlock : MonoBehaviour
         }
 
         if(_songManager != null)
-        {
-            _songManager.SpawnKeyNote += SpawnKeyNote;
-            _songManager.SpawnKeyNote += SpawnObstacle;
-        }
-        
+            _songManager.SpawnKeyNote += CallSpawnCoroutine;
+
     }
 
     private void OnDestroy()
     {
         if (_songManager != null)
-        {
-            _songManager.SpawnKeyNote -= SpawnKeyNote;
-            _songManager.SpawnKeyNote -= SpawnObstacle;
-        }
+            _songManager.SpawnKeyNote -= CallSpawnCoroutine;
     }
 
     private void SpawnKeyNote()
@@ -58,5 +52,17 @@ public class LevelBlock : MonoBehaviour
     private int GetRandomeLane()
     {
         return Random.Range(0, _lanes.Count);
+    }
+
+    private void CallSpawnCoroutine()
+    {
+        StartCoroutine(SpawnKeyAndObstacle());
+    }
+
+    private IEnumerator SpawnKeyAndObstacle()
+    {
+        SpawnKeyNote();
+        yield return null;
+        SpawnObstacle();
     }
 }
