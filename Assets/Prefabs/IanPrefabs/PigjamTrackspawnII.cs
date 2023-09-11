@@ -35,7 +35,7 @@ public class PigjamTrackspawnII : MonoBehaviour
             Destroy(_block2inst.gameObject);
             _block2inst = Instantiate(_block2, vecInstance3, Quaternion.identity);
         }
-        if (_block3.transform.position.z < -10f)
+        if (_block3inst.transform.position.z < -10f)
         {
             Destroy(_block3inst.gameObject);
             _block3inst = Instantiate(_block3, vecInstance3, Quaternion.identity);
