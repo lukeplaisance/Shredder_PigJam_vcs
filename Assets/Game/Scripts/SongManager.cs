@@ -34,6 +34,8 @@ public class SongManager : MonoBehaviour
 
     public Action SpawnKeyNote;
 
+    public AudioSource audio;
+
     void Start()
     {
         //calculate how many seconds is one beat
@@ -44,7 +46,7 @@ public class SongManager : MonoBehaviour
         dsptimesong = (float)AudioSettings.dspTime;
 
         //start the song
-        GetComponent<AudioSource>().Play();
+       audio.Play();
     }
 
     void Update()
