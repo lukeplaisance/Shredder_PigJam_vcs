@@ -95,7 +95,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dc57869c225341c285c817190cb5974, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Pigjamplayer: {fileID: 0}
+  Pigjamplayer: {fileID: 8471956519684265710}
   Pigjamposition: {fileID: 2339728395330689221}
   Lanechangespeed: 10
   Pigjamxtarget: 0

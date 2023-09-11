@@ -9,10 +9,10 @@ public class PigJamMoveScriptMkIII : MonoBehaviour
     public bool ChangingLeft = false;
     public bool ChangingRight = false;
     
-    void Start()
+    /*void Start()
     {
         Pigjamplayer.AddForce(0, 0, 250);
-    }
+    }*/
     void Update()
     {
         if (Input.GetKeyDown("left") && Pigjamxtarget > -2 && ChangingLeft == false && ChangingRight == false)

@@ -1636,7 +1636,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1875839488}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: a70de3fe74cbba74e99ddd7845f44095, type: 3}
   m_Name: 
@@ -1663,7 +1663,6 @@ MonoBehaviour:
   - 25
   - 27
   nextIndex: 0
-  notePrefab: {fileID: 6423910551574247509, guid: 0bd61ff05ce98e341ba1270e7574b4f5, type: 3}
 --- !u!4 &1875839490
 Transform:
   m_ObjectHideFlags: 0
@@ -1884,6 +1883,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4923347325266508145, guid: 2df96d0e1e81d4c4ca170c427f0e3449, type: 3}
+      propertyPath: songManager
+      value: 
+      objectReference: {fileID: 1875839489}
     - target: {fileID: 7136503137132791725, guid: 2df96d0e1e81d4c4ca170c427f0e3449, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
