@@ -31,10 +31,11 @@ public class LevelBlock : MonoBehaviour
             _songManager.SpawnKeyNote -= CallSpawnCoroutine;
     }
 
-    private void SpawnKeyNote()
+    private void SpawnKeyNote(float zposition)
     {
         var randomLane = GetRandomeLane();
-        Instantiate(_keyNotePrefab, _lanes[randomLane].transform);
+        var newPosition = new Vector3(_lanes[randomLane].transform.position.x, _lanes[randomLane].transform.position.y, zposition);
+        Instantiate(_keyNotePrefab, newPosition, Quaternion.identity);
         _spawnedKeyNoteLane = randomLane;
     }
 
@@ -54,14 +55,14 @@ public class LevelBlock : MonoBehaviour
         return Random.Range(0, _lanes.Count);
     }
 
-    private void CallSpawnCoroutine()
+    private void CallSpawnCoroutine(float newPos)
     {
-        StartCoroutine(SpawnKeyAndObstacle());
+        StartCoroutine(SpawnKeyAndObstacle(newPos));
     }
 
-    private IEnumerator SpawnKeyAndObstacle()
+    private IEnumerator SpawnKeyAndObstacle(float newPos)
     {
-        SpawnKeyNote();
+        SpawnKeyNote(newPos);
         yield return null;
         SpawnObstacle();
     }
