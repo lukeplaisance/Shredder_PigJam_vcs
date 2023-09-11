@@ -15,7 +15,7 @@ public class PigJamMoveScriptMkIII : MonoBehaviour
     }*/
     void Update()
     {
-        if (Input.GetKeyDown("left") && Pigjamxtarget > -2 && ChangingLeft == false && ChangingRight == false)
+        if (Input.GetKeyDown("left") && Pigjamxtarget > -1 && ChangingLeft == false && ChangingRight == false)
         {
             Pigjamxtarget--;
             ChangingLeft = true;
